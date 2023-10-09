@@ -65,7 +65,7 @@ extension ImagesListViewController {
         
         let gradient = CAGradientLayer()
         gradient.frame = cell.cellBack.bounds
-        gradient.colors = [UIColor.ypWhiteAlpha.cgColor, UIColor.ypWhiteTrans.cgColor]
+        gradient.colors = [UIColor.ypGradAlpha.cgColor, UIColor.ypGradTrans.cgColor]
         cell.cellBack.layer.insertSublayer(gradient, at: 0)
         
         let isLiked = indexPath.row % 2 == 0

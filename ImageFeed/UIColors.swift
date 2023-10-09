@@ -16,6 +16,6 @@ extension UIColor { }
 extension UIColor {
         static var ypBlack: UIColor { UIColor(named: "YP Black") ?? UIColor.black}
         static var ypWhite: UIColor { UIColor(named: "YP White") ?? UIColor.white}
-        static var ypWhiteAlpha: UIColor { UIColor(named: "YP White Alpha") ?? UIColor(red: CGFloat(26.0/255.0), green: CGFloat(27.0/255.0), blue: CGFloat(34.0/255.0), alpha: CGFloat(0.0))}
-        static var ypWhiteTrans: UIColor { UIColor(named: "YP White Trans") ?? UIColor(red: CGFloat(26.0/255.0), green: CGFloat(27.0/255.0), blue: CGFloat(34.0/255.0), alpha: CGFloat(0.2))}
+        static var ypGradAlpha: UIColor { UIColor(named: "YP White Alpha") ?? UIColor(red: CGFloat(26.0/255.0), green: CGFloat(27.0/255.0), blue: CGFloat(34.0/255.0), alpha: CGFloat(0.0))}
+        static var ypGradTrans: UIColor { UIColor(named: "YP White Trans") ?? UIColor(red: CGFloat(26.0/255.0), green: CGFloat(27.0/255.0), blue: CGFloat(34.0/255.0), alpha: CGFloat(0.2))}
      }
