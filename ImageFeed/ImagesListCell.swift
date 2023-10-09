@@ -10,9 +10,11 @@ import UIKit
 
 final class ImagesListCell: UITableViewCell {
 
+    @IBOutlet weak var cellBack: UIView!
+    @IBOutlet weak var cellImage: UIImageView!
+    @IBOutlet weak var cellLike: UIButton!
+    @IBOutlet weak var cellDate: UILabel!
     static let reuseIdentifier = "ImagesListCell"
     
-    @IBOutlet weak var CellLike: UIButton!
-    @IBOutlet weak var CellDate: UILabel!
-    @IBOutlet weak var CellImage: UIImageView!
+    
 }

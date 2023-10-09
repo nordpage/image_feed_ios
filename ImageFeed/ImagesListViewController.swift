@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ImagesListViewController: UIViewController {
+final class ImagesListViewController: UIViewController {
     
     @IBOutlet private var tableView: UITableView!
     
@@ -30,6 +30,9 @@ class ImagesListViewController: UIViewController {
         return formatter
     }()
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 
 }
 
@@ -57,12 +60,17 @@ extension ImagesListViewController {
             return
         }
 
-        cell.CellImage.image = image
-        cell.CellDate.text = dateFormatter.string(from: Date())
-
+        cell.cellImage.image = image
+        cell.cellDate.text = dateFormatter.string(from: Date())
+        
+        let gradient = CAGradientLayer()
+        gradient.frame = cell.cellBack.bounds
+        gradient.colors = [UIColor.ypWhiteAlpha.cgColor, UIColor.ypWhiteTrans.cgColor]
+        cell.cellBack.layer.insertSublayer(gradient, at: 0)
+        
         let isLiked = indexPath.row % 2 == 0
         let likeImage = isLiked ? UIImage(named: "like_on") : UIImage(named: "like_off")
-        cell.CellLike.setImage(likeImage, for: .normal)
+        cell.cellLike.setImage(likeImage, for: .normal)
     }
 }
 
